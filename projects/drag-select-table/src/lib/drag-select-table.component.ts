@@ -59,7 +59,7 @@ export class DragSelectTableComponent implements OnInit {
   getWrapperClass() {
     return {
       [`${this.class}`]: this.class,
-      [`drag-select-table`]: true,
+      ['drag-select-table']: true,
     };
   }
 

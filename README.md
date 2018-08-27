@@ -1,4 +1,20 @@
 # NgDragSelectTable
+[![NPM](https://nodei.co/npm/drag-select-table.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/drag-select-table)
+
+[![NPM Version][npm-image]][npm-url]
+[![NPM Downloads][downloads-image]][downloads-url]
+[![Node Version][node-image]][node-url]
+
+
+[npm-image]: https://img.shields.io/npm/v/drag-select-table.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/drag-select-table
+
+[downloads-image]: https://img.shields.io/npm/dm/drag-select-table.svg?style=flat-square
+[downloads-url]: https://npmjs.org/package/drag-select-table
+
+[node-image]: https://img.shields.io/node/v/phantom.svg?style=flat-square
+[node-url]: https://nodejs.org/en/download/
+
 
 angular 6 component
 
@@ -9,7 +25,7 @@ angular 6 component
 
 ## Install
 
-```js
+```bash
 npm install drag-select-table --save
 or
 yarn add drag-select-table
@@ -18,7 +34,7 @@ yarn add drag-select-table
 ## Usage
 
 ```js
-import { DragSelectTableModule } from 'projects/drag-select-table/src';
+import { DragSelectTableModule } from 'drag-select-table';
 
 @NgModule({
   imports: [

@@ -48,5 +48,21 @@
     "tslib": "^1.9.0",
     "tslint": "~5.9.1",
     "typescript": "~2.7.2"
-  }
+  },
+  "description": "ng6 drag select table",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kavil/NgDragSelectTable.git"
+  },
+  "keywords": [
+    "ng6",
+    "drag select",
+    "select table"
+  ],
+  "author": "kai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kavil/NgDragSelectTable/issues"
+  },
+  "homepage": "https://github.com/kavil/NgDragSelectTable#readme"
 }
