@@ -121,6 +121,46 @@
           }
         }
       }
+    },
+    "dragSelectTable": {
+      "root": "projects/drag-select-table",
+      "sourceRoot": "projects/drag-select-table/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/drag-select-table/tsconfig.lib.json",
+            "project": "projects/drag-select-table/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/drag-select-table/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/drag-select-table/src/test.ts",
+            "tsConfig": "projects/drag-select-table/tsconfig.spec.json",
+            "karmaConfig": "projects/drag-select-table/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/drag-select-table/tsconfig.lib.json",
+              "projects/drag-select-table/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngDragSelectTable"

@@ -1,0 +1,15 @@
+<table
+    [ngClass]="getWrapperClass()"
+    [ngStyle]="showStyle">
+    <tr *ngFor="let tr of rowList; let x = index">
+        <td cell
+            *ngFor="let td of columnList; let y = index"
+            (mouseStart)="mouseStart($event)"
+            (mouseIng)="mouseIng($event)"
+            (mouseEnd)="mouseEnd($event)"
+            [active]="setActive(x, y)"
+            [checked]="values[x][y]"
+            [coordinate]="{x: x, y: y}">
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,17 @@
+.drag-select-table {
+  border-collapse: collapse;
+  td {
+    overflow: hidden;
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #ededed;
+    &.active,
+    &.checked.active {
+      background: #AEDDFF;
+    }
+    &.checked {
+      background: #4FB6FF;
+    }
+  }
+}

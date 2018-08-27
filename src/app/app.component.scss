@@ -1,0 +1,23 @@
+.wrap {
+  overflow: hidden;
+}
+
+.value-wrap {
+  width: 500px;
+  margin: auto;
+  & pre {
+    background: #fff;
+    border: 1px #eee dashed;
+  }
+}
+
+table.my-ds-table {
+  width: 700px;
+  margin: 0 auto;
+  height: 300px;
+  td {
+    border: 10px solid transparent;
+    padding: 0;
+    background: #ededed;
+  }
+}
