@@ -21,7 +21,9 @@ angular 6 component
 ![预览图](./dragtable.gif)
 
 *This project is a Demo, you can clone it to build.*<br>
-*Public component in `projects` folder*
+*Public component in `projects` folder*<br>
+
+[![Edit ng-drag-select-table](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/kavil/NgDragSelectTable/tree/master/)
 
 ## Install
 
