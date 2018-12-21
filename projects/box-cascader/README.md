@@ -1,4 +1,4 @@
-# NgDragSelectTable
+# box-cascader
 [![NPM](https://nodei.co/npm/box-cascader.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/box-cascader)
 
 [![NPM Version][npm-image]][npm-url]
