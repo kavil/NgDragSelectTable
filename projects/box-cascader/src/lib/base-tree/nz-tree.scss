@@ -1,0 +1,15 @@
+.nz-basetree {
+  display: flex;
+  border: 1px solid #EEEFF0;
+  position: relative;
+
+}
+
+ul.ant-tree {
+  padding: 0;
+  margin: 0;
+  height: 250px;
+  overflow-y: auto;
+  flex: 1;
+  border-right: 1px solid #EEEFF0;
+}

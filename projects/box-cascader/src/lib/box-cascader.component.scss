@@ -1,0 +1,41 @@
+.result {
+    line-height: 1;
+    margin-bottom: 4px;
+    position: relative;
+    padding-right: 20px;
+
+    .link {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    span {
+        margin: 0 10px 10px 0;
+        background: #F5F7FA;
+        border: 1px solid #EEEFF0;
+        line-height: 24px;
+        display: inline-block;
+        padding-left: 12px;
+        color: #333;
+
+        &:hover {
+            border-color: #ddd;
+        }
+
+        i {
+            color: #A6A9AD;
+            transition: all 0.2s ease;
+            font-size: 12px;
+            padding: 0 5px;
+            font-style: normal;
+            cursor: pointer;
+
+            &:hover {
+                color: #333;
+            }
+        }
+
+
+    }
+}

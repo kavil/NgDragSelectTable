@@ -14,6 +14,36 @@ export class AppComponent {
   public row = ROW_COUNT;
   public col = COL_COUNT;
 
+  nodes = [{
+    key: 'zhejiang',
+    title: 'Zhejiang',
+    children: [{
+      key: 'hangzhou',
+      title: 'Hangzhou',
+      children: [{
+        key: 'xihu',
+        title: 'West Lake',
+        isLeaf: true
+      }]
+    }, {
+      key: 'ningbo',
+      title: 'Ningbo',
+      isLeaf: true
+    }]
+  }, {
+    key: 'jiangsu',
+    title: 'Jiangsu',
+    children: [{
+      key: 'nanjing',
+      title: 'Nanjing',
+      children: [{
+        key: 'zhonghuamen',
+        title: 'Zhong Hua Men',
+        isLeaf: true
+      }]
+    }]
+  }];
+
   public updateValues(values) {
     console.log(values); // values 跟 this.resTable 是一样的
   }
@@ -28,4 +58,6 @@ export class AppComponent {
     };
     return '[' + this.resTable.map(row2Str).join('],\n[') + ']\n';
   }
+
+
 }

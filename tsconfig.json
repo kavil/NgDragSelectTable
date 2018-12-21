@@ -23,6 +23,12 @@
       ],
       "dragSelectTable/*": [
         "dist/drag-select-table/*"
+      ],
+      "boxCascader": [
+        "dist/box-cascader"
+      ],
+      "boxCascader/*": [
+        "dist/box-cascader/*"
       ]
     }
   }

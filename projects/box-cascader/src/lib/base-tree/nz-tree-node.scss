@@ -1,0 +1,22 @@
+li {
+  padding: 4px 6px;
+  position: relative;
+
+  &:hover {
+    background: #fff9f0;
+  }
+
+  i {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #A6A9AD;
+    font-size: 26px;
+    font-style: normal;
+  }
+
+  &.ant-tree-treenode-switcher-open {
+    background: #F5F7FA;
+  }
+}

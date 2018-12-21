@@ -1,0 +1,19 @@
+
+<div class="result" *ngIf="selectedNodes.length">
+  <ng-container  *ngFor="let li of selectedNodes; let i = index">
+      <span [@selectTagAnimation]>{{li.title}}
+          <i class="font" (click)="removeSelected(li, true, $event)">✕</i>
+      </span>
+  </ng-container>
+  <button nz-button nzType="default" class="link" (click)="onClearSelection()">清空</button>
+</div>
+<nz-basetree
+  #treeRef
+  [nzCheckedKeys]="value"
+  [nzData]="nodes"
+  [nzShowIcon]="false"
+  nzCheckable="true"
+  nzMultiple="true"
+  (nzClick)="nzTreeClick.emit($event)"
+  (nzCheckBoxChange)="checkBoxChange.emit($event)">
+</nz-basetree>

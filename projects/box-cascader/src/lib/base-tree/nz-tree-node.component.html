@@ -1,0 +1,61 @@
+<li
+  #dragElement
+  role="treeitem"
+  [style.display]="displayStyle"
+  [ngClass]="nzNodeClass"
+  [class.ant-tree-treenode-switcher-open]="isSwitcherOpen"
+  [class.ant-tree-treenode-switcher-close]="isSwitcherClose"
+  [class.ant-tree-treenode-checkbox-checked]="nzTreeNode.isChecked"
+  [class.ant-tree-treenode-checkbox-indeterminate]="nzTreeNode.isHalfChecked"
+  [class.ant-tree-treenode-selected]="nzTreeNode.isSelected"
+  [class.ant-tree-treenode-loading]="nzTreeNode.isLoading">
+  <ng-container *ngIf="nzCheckable">
+    <span
+      class="ant-tree-checkbox"
+      [class.ant-tree-checkbox-checked]="nzTreeNode.isChecked"
+      [class.ant-tree-checkbox-indeterminate]="nzTreeNode.isHalfChecked"
+      [class.ant-tree-checkbox-disabled]="(nzTreeNode.isDisabled || nzTreeNode.isDisableCheckbox)"
+      (click)="_clickCheckBox($event)">
+      <span class="ant-tree-checkbox-inner"></span>
+    </span>
+  </ng-container>
+  <ng-container *ngIf="!nzTreeTemplate">
+    <span
+      title="{{nzTreeNode.title}}"
+      [attr.draggable]="canDraggable"
+      [attr.aria-grabbed]="canDraggable"
+      [ngClass]="nzNodeContentClass"
+      [class.ant-tree-node-content-wrapper-open]="isSwitcherOpen"
+      [class.ant-tree-node-content-wrapper-close]="isSwitcherClose"
+      [class.ant-tree-node-selected]="nzTreeNode.isSelected"
+      [class.draggable]="canDraggable">
+      <span
+        *ngIf="nzTreeNode.origin.icon"
+        [class.ant-tree-icon__open]="isSwitcherOpen"
+        [class.ant-tree-icon__close]="isSwitcherClose"
+        [class.ant-tree-icon_loading]="nzTreeNode.isLoading"
+        [ngClass]="nzNodeContentLoadingClass">
+        <span
+          [ngClass]="nzNodeContentIconClass">
+          <i nz-icon *ngIf="nzIcon" [type]="!oldAPIIcon && nzIcon" [ngClass]="oldAPIIcon && nzIcon"></i>
+        </span>
+      </span>
+      <span class="ant-tree-title">
+        <ng-container *ngIf="nzTreeNode.isMatched">
+          <span>
+            {{highlightKeys[0]}}<span class="font-highlight">{{nzSearchValue}}</span>{{highlightKeys[1]}}
+          </span>
+        </ng-container>
+        <ng-container *ngIf="!nzTreeNode.isMatched">
+          {{nzTreeNode.title}}
+        </ng-container>
+      </span>
+    </span>
+  </ng-container>
+  <ng-template
+    [ngTemplateOutlet]="nzTreeTemplate"
+    [ngTemplateOutletContext]="{ $implicit: nzTreeNode }">
+  </ng-template>
+  <!-- <i class="icon" *ngIf="!nzTreeNode.isLeaf">&#xe61b;</i> -->
+  <i class="icon" *ngIf="!nzTreeNode.isLeaf">›</i>
+</li>
